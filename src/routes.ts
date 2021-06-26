@@ -23,6 +23,7 @@ const listTagsController = new ListTagsController()
 const listUsersController = new ListUsersController()
 
 router.post('/login', authenticateUserController.handle)
+router.get('/token/refresh/:refresh_token', authenticateUserController.refreshAccessToken)
 
 router.get('/users', ensureAuth, listUsersController.handle)
 router.post('/users', createUserController.handle)
