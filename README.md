@@ -1,5 +1,9 @@
 # NLW Valoriza
 
+## Resumo do Projeto
+    Este projeto é uma plataforma onde um usuário pode se cadastrar, logar, elogiar outros usuários e receber elogios.
+    As tecnologias utilizadas foram Typescript, Node, Express, Typeorm, Sqlite.
+
 ## Regras
 
 - Cadastro de usuário
@@ -18,8 +22,8 @@
 
 - Cadastro de elogios
 
-    [ ] Não é permitido um usuário cadastrar um elogio para si mesmo
+    [ x ] Não é permitido um usuário cadastrar um elogio para si mesmo
 
-    [ ] Não é permitido cadastrar um elogio para um usuário inválido
+    [ x ] Não é permitido cadastrar um elogio para um usuário inválido
 
-    [ ] O usuário precisa estar autenticado para cadastrar elogios 
+    [ x ] O usuário precisa estar autenticado para cadastrar elogios 
