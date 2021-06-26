@@ -12,11 +12,27 @@ export class AuthenticateUserController {
 
         const authenticateUserService = new AuthenticateUserService()
 
-        const token = await authenticateUserService.execute({
+        const {
+            access_token,
+            refresh_token
+        } = await authenticateUserService.execute({
             email,
             password
         })
 
-        return res.json(token)
+        return res.json({
+            access_token,
+            refresh_token
+        })
+    }
+
+    async refreshAccessToken(req: Request, res: Response) {
+        const { refresh_token } = req.params
+
+        const authenticateUserService = new AuthenticateUserService()
+
+        const newAccessToken = await authenticateUserService.refreshAccessToken(refresh_token)
+
+        return res.json(newAccessToken)
     }
 }
