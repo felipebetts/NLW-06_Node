@@ -4,6 +4,7 @@
 
    Este projeto é uma plataforma onde um usuário pode se cadastrar, logar, elogiar outros usuários e receber elogios.
    As tecnologias utilizadas foram Typescript, Node, Express, Typeorm, Sqlite.
+   Foi implementada autenticação com JWT, e todas as rotas com dados sensíveis estão com middleware de autenticação.
 
 ## Regras
 
